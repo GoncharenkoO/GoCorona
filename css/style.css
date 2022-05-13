@@ -80,8 +80,8 @@ button {
   margin: 0px auto;
 }
 
-.header {
-}
+/* .header {
+} */
 
 .header__container {
   display: flex;
@@ -130,11 +130,11 @@ button {
   display: flex;
 }
 
-.menu__item {
+/* .menu__item {
 }
 
 .menu__link {
-}
+} */
 
 .button {
   display: inline-block;
