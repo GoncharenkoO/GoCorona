@@ -76,12 +76,52 @@ button {
 }
 
 [class*="_container"] {
-  max-width: 1057px;
+  max-width: 1087px;
   margin: 0px auto;
+  padding: 0px 15px;
 }
 
-/* .header {
-} */
+/* PC */
+@media (max-width: 1087px) {
+  [class*="_container"] {
+    max-width: 970px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+  [class*="_container"] {
+    max-width: 750px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  [class*="_container"] {
+    max-width: none;
+  }
+}
+
+/* MOBILE SMALL*/
+@media (max-width: 479.98px) {
+  [class*="_container"] {
+    max-width: none;
+  }
+}
+
+[class*="_container"] {
+  max-width: z;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
 
 .header__container {
   display: flex;
@@ -90,12 +130,16 @@ button {
 }
 
 .header__logo {
-  font-family: Rubik;
+  position: relative;
+  z-index: 5;
   width: 40.22px;
   height: 40px;
 }
 
 .logo-text-first {
+  position: relative;
+  z-index: 5;
+  font-family: Rubik;
   color: #000;
   font-weight: 700;
   font-size: 18px;
@@ -104,6 +148,9 @@ button {
 }
 
 .logo-text-second {
+  position: relative;
+  z-index: 5;
+  font-family: Rubik;
   color: #ec5863;
   font-weight: 700;
   font-size: 18px;
@@ -116,26 +163,99 @@ button {
 }
 
 .header__button {
+  position: relative;
+  z-index: 9;
   flex: 0 0 252px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
+/* ....................................... */
 .menu {
   display: flex;
   justify-content: flex-end;
+  padding: 0px 40px 0px 0px;
 }
 
 .menu__list {
   display: flex;
 }
 
-/* .menu__item {
+.menu__item {
+  margin: 0px 40px 0px 0px;
+}
+
+.menu__item:last-child {
+  margin: 0px;
 }
 
 .menu__link {
-} */
+  font-family: Raleway;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #000;
+}
 
+@media (max-width: 991.98px) {
+  .header__container {
+    min-height: 80px;
+  }
+  .header__button {
+    flex: 0 0 150px;
+  }
+  .menu__item {
+    margin: 0px 30px 0px 0px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 90px 15px 30px 15px;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu__item {
+    margin: 0px 0px 25px 0px;
+  }
+  .menu__item:last-child {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .menu__link {
+    font-size: 20px;
+  }
+
+  /* .logo-text-first,
+  .logo-text-second {
+    flex: 0 0 0;
+    overflow: hidden;
+  } */
+}
+
+@media (max-width: 479.98px) {
+  .logo-text-first,
+  .logo-text-second {
+    flex: 0 0 0;
+    overflow: hidden;
+  }
+}
+
+/* ....................................... */
 .button {
   display: inline-block;
   font-family: "Raleway";
@@ -161,4 +281,32 @@ button {
 
 .button__blue:hover {
   background-color: #184387;
+}
+
+/* ....................................... */
+.icon-menu {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .icon-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    flex: 0 0 30px;
+    height: 18px;
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+.icon-menu::before,
+.icon-menu::after {
+  content: "";
+  background-color: #000;
+  height: 2px;
+}
+
+.icon-menu span {
+  height: 2px;
+  background-color: #000;
 }
