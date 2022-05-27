@@ -371,6 +371,10 @@ button {
   color: #616161;
   max-width: 375px;
 }
+.block-text__text_mw {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 .block-text__text:not(:last-child) {
   margin: 0px 0px 12px 0px;
@@ -674,7 +678,7 @@ button {
 
 @media (max-width: 767.98px) {
   .experts {
-    padding: 103px 0px 116px 0px;
+    padding: 80px 0px 85px 0px;
   }
   .experts__body {
     align-items: stretch;
@@ -690,6 +694,12 @@ button {
   .experts__content {
     padding: 0;
     margin: 0px 0px 30px 0px;
+  }
+  .statistics-experts__body {
+    margin: 0px 0px 50px 0px;
+  }
+  .body-statistics-experts {
+    padding: 25px;
   }
 }
 
@@ -712,8 +722,20 @@ button {
 }
 
 @media (max-width: 479.98px) {
+  .experts {
+    padding: 50px 0px 35px 0px;
+  }
   .experts__video iframe {
     height: auto;
+  }
+  .statistics-experts__body {
+    margin: 0px 0px 40px 0px;
+  }
+  .body-statistics-experts {
+    flex-direction: column;
+  }
+  .body-statistics-experts__item:not(:last-child) {
+    margin: 0px 0px 15px 0px;
   }
 }
 
@@ -781,4 +803,27 @@ button {
   letter-spacing: 0.37em;
   text-transform: uppercase;
   color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .statistics-experts__body {
+    margin: 0px 0px 70px 0px;
+  }
+  .body-statistics-experts {
+    padding: 25px;
+  }
+  .experts__block-text {
+    max-width: none;
+  }
+}
+
+/* ...................................................... */
+
+.healthcare {
+}
+.healtcare__container {
+}
+.healthcare__block-text {
+  text-align: center;
+  margin: 0px 0px 45px 0px;
 }
